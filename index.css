@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'chicago';
+    src: url('fonts/myfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    	 url('fonts/myfont.woff2') format('woff2'), 
+         url('fonts/chicago.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* boot image */
+.boot img {
+	width:  10vw;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+/* apps on screen */
+
+.app {
+	display: none; 
+}
+
+.app img {
+	width: 60px;
+	display: block;
+}
+
+.app p {
+	background-color: white;
+	margin-top: -30px;
+	line-height: normal;
+	display: inline-block;
+}
+
+/* starting positions of apps */
+
+#bin {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#sys {
+	position: fixed;
+    bottom: 100;
+    right: 0;
+}
+
+/* welcome text box */
+
+.welcome {
+	display: none;
+	padding: 20px;
+	padding-bottom: 80px;
+	background-color: white;
+	width: 50%;
+    letter-spacing: 1.25px;
+	margin: 0;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	text-align: center;
+	border-style: dashed solid solid solid;
+	border-width: 1px;
+	box-shadow: 4px 4px;
+}
+
+html {
+	font-family: 'chicago';
+	background-image: url(images/wall.png);
+	background-repeat: repeat;
+	image-rendering: crisp-edges;
+}
+
+/* top menu bar */
+
+ul {
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: black;
+	letter-spacing: 1.25px;
+	overflow: hidden;
+	border-style: solid;
+	border-width: 2px;
+}
+
+li {
+	text-align: center;
+	background-color: white;
+	float: left;
+	padding: 3px 8px;
+}
+
+li:hover {
+	background-color: #111;
+	color: white;
+}
