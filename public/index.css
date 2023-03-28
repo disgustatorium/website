@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'chicago';
-    src: url('fonts/myfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    	 url('fonts/myfont.woff2') format('woff2'), 
-         url('fonts/chicago.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    src: url('../fonts/myfont.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    	 url('../fonts/myfont.woff2') format('woff2'), 
+         url('../fonts/chicago.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -71,14 +71,14 @@
 
 html {
 	font-family: 'chicago';
-	background-image: url(images/wall.png);
+	background-image: url(../images/wall.png);
 	background-repeat: repeat;
 	image-rendering: crisp-edges;
 }
 
 /* top menu bar */
 
-ul {
+#top {
 	display: none;
 	list-style-type: none;
 	margin: 0;
@@ -89,16 +89,94 @@ ul {
 	overflow: hidden;
 	border-style: solid;
 	border-width: 2px;
+
 }
 
-li {
+/* top menu bar list elements */
+
+#top li {
 	text-align: center;
 	background-color: white;
 	float: left;
 	padding: 3px 8px;
 }
 
-li:hover {
+/* top menu bar list elements invert when you hover on them*/
+
+#top li:hover {
 	background-color: #111;
 	color: white;
 }
+
+/* top menu bar sublists appear on hover */
+
+#top li:hover #logo + #_logo {
+	display: block;
+	color: black;
+}
+
+#top li:hover #file + #_file {
+	display: block;
+	color: black;
+}
+
+#top li:hover #edit + #_edit {
+	display: block;
+	color: black;
+}
+
+#top li:hover #view + #_view {
+	display: block;
+	color: black;
+}
+
+#top li:hover #special + #_special {
+	display: block;
+	color: black;
+}
+
+
+/* top bar drop down menu */
+
+.submenu1 {
+	display:  none;
+	position: absolute;
+	list-style: none;
+	float: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	width: 200px;
+}
+
+/* top bar drop down positions */
+
+#_logo {
+  top: 40px;
+  left: 8px;
+}
+
+#_file {
+  top: 40px;
+  left: 39px;
+}
+
+#_edit {
+	top: 40px;
+	left: 85px;
+}
+
+#_view {
+	top: 40px;
+	left: 134px;
+}
+
+#_special {
+	top: 40px;
+	left: 192px;
+}
+
+
+
